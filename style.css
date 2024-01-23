@@ -18,27 +18,25 @@ body {
     width: 85%;
     margin: 0 auto;
     padding-top: 7rem;
-
 }
-nav ul {
+#navList ul {
     display: flex;
     list-style-type: none;
     justify-content: space-between;
     padding: 0;
-    padding-bottom: 1rem;
-    margin-top: 2rem;
+    margin: 0;
 }
-nav ul a {
+#navList ul li button {
     padding: 2rem 5.6rem;
     background-color: var(--darkblue);
     font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
+    border: none;
     color: var(--white);
     font-size: 1.5rem;
     font-weight: 900;
 
 }
-a:hover {
+#navList ul li button:hover {
     background-color: var(--white);
     color: var(--darkblue);
 }

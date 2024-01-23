@@ -94,3 +94,14 @@ const resources = [
         ]
     },
 ]
+navList = "<ul>"
+
+resources.map(category => navList += 
+    `<li><button>${category.category}</button></li>`
+)
+navList += "</ul>"
+
+    document.getElementById("navList").innerHTML = navList
+    console.log(navList)
+
+

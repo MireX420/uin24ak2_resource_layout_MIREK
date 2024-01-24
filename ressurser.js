@@ -94,14 +94,46 @@ const resources = [
         ]
     },
 ]
+
+/* Display nav*/
 navList = "<ul>"
-
-resources.map(category => navList += 
-    `<li><button>${category.category}</button></li>`
-)
+resources.map(category => {
+    navList += `<li><button onclick="showContent('${category.category}')">${category.category}</button></li>`
+})
 navList += "</ul>"
+document.getElementById("navList").innerHTML = navList
 
-    document.getElementById("navList").innerHTML = navList
-    console.log(navList)
+
+/* Display content*/
+function showContent(selectedCategory) {
+    const selectedResource = resources.find(category => category.category === selectedCategory)
+
+    if (selectedResource) {
+        let contentHTML = 
+            `<article>
+                <h1>${selectedResource.category}</h1>
+                <p>${selectedResource.text}</p>
+                <ul>`
+        
+
+        selectedResource.sources.forEach(source => {
+            contentHTML += `<li><a href="${source.url}">${source.title}</a></li>`
+        })
+
+        contentHTML += 
+                `</ul>
+            </article>`
+        
+        console.log(contentHTML)
+
+        document.querySelector("main").innerHTML = contentHTML
+
+        
+        
+        
+    }
+}
+
+
 
 

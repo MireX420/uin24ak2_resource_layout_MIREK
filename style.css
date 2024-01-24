@@ -4,13 +4,14 @@
 :root {
     --darkblue: #2A324B;
     --blue: #58699D;
+    --lightblue: #E1E5EE;
     --white: #fff;
 
     --font: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: var(--blue);
+    background-color: var(--lightblue);
     margin: 0;
     padding: 0;
 }

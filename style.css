@@ -26,6 +26,7 @@ body {
     justify-content: space-between;
     padding: 0;
     margin: 0;
+    max-width: 100%;
 }
 #navList ul li button {
     padding: 2rem 5.6rem;
@@ -35,9 +36,12 @@ body {
     color: var(--white);
     font-size: 1.5rem;
     font-weight: 900;
-
 }
 #navList ul li button:hover {
+    background-color: var(--white);
+    color: var(--darkblue);
+}
+#navList ul li button.active {
     background-color: var(--white);
     color: var(--darkblue);
 }
@@ -55,6 +59,9 @@ article {
     font-family: 'Montserrat', sans-serif;
     padding-left: 8rem;
     padding-right: 8rem;
+}
+article li a {
+    color: var(--blue);
 }
 h1{  
     font-size: 2rem;

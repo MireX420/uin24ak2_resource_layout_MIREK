@@ -98,7 +98,7 @@ const resources = [
 /* Display nav*/
 navList = "<ul>"
 resources.map(category => {
-    navList += `<li><button onclick="showContent('${category.category}')">${category.category}</button></li>`
+    navList += `<li><button onclick="showContent('${category.category}')" data-category="${category.category}">${category.category}</button></li>`
 })
 navList += "</ul>"
 document.getElementById("navList").innerHTML = navList
@@ -107,6 +107,17 @@ document.getElementById("navList").innerHTML = navList
 /* Display content*/
 function showContent(selectedCategory) {
     const selectedResource = resources.find(category => category.category === selectedCategory)
+
+    if (selectedResource) {
+        document.querySelectorAll("button").forEach(button => {
+            button.classList.remove("active")
+        })
+
+        const currentBtn = document.querySelector(`button[data-category="${selectedCategory}"]`)
+        if (currentBtn) {
+            currentBtn.classList.add("active")
+        }
+    }
 
     if (selectedResource) {
         let contentHTML = 
@@ -124,11 +135,11 @@ function showContent(selectedCategory) {
                 `</ul>
             </article>`
         
-        console.log(contentHTML)
+        
 
         document.querySelector("main").innerHTML = contentHTML
 
-        
+       
         
         
     }

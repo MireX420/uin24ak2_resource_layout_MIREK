@@ -144,7 +144,8 @@ function showContent(selectedCategory) {
         
     }
 }
-
+//Kilder
+//https://youtu.be/R8rmfD9Y5-c?list=LL
 
 
 

@@ -26,16 +26,21 @@ body {
     justify-content: space-between;
     padding: 0;
     margin: 0;
-    max-width: 100%;
 }
+#navList ul li {
+   flex-grow: 1;
+}
+
 #navList ul li button {
-    padding: 2rem 5.6rem;
+    padding: 2rem;
+    width: 100%;
     background-color: var(--darkblue);
     font-family: 'Montserrat', sans-serif;
     border: none;
     color: var(--white);
     font-size: 1.5rem;
     font-weight: 900;
+    border: 0.4rem solid --white;
 }
 #navList ul li button:hover {
     background-color: var(--white);
